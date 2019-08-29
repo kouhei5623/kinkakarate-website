@@ -1,0 +1,513 @@
+@charset "utf-8";
+/* FUKADA css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; word-wrap: break-word; }
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display: block; }
+html { font-size: 62.5%; }
+body { -webkit-text-size-adjust: 100%; overflow-x: hidden; line-height: 1; font: 1.6rem/1.75 'M PLUS Rounded 1c' , 'Lato', 'Noto Sans Japanese', '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; letter-spacing: 0.08em; }
+a { text-decoration: none; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+img{ width: 100%; }
+textarea, input, button{ display: block; border: none; font: 1.6rem/1.75 'M PLUS Rounded 1c' , 'Lato', 'Noto Sans Japanese', '游ゴシック体', YuGothic, '游ゴシック Medium', 'Yu Gothic Medium', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif; letter-spacing: 0.08em; }
+textarea, input, select{ width: 100%; }
+button:hover{ cursor: pointer; }
+* { box-sizing: border-box; }
+/* 余白 */
+.wrap{ max-width: 1100px; margin: 0 auto; padding: 0 2%; }
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"], input[type="button"], select { border-radius: 0; -webkit-box-sizing: content-box; -webkit-appearance: button; appearance: button; border: none; box-sizing: border-box; cursor: pointer; }
+input[type="submit"]::-webkit-search-decoration, input[type="button"]::-webkit-search-decoration, select::-webkit-search-decoration { display: none; }
+input[type="submit"]:focus, input[type="button"]:focus, select:focus { outline-offset: -2px; }
+/* 共通+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ボタン */
+.btn{ text-align: center; }
+.btn a{ display: block; margin: 0 auto; padding: 10px 5px; width: 400px; background: linear-gradient(135deg, #4fc4ce, #4682b4); border-radius: 50px; font-weight: 700; font-size: 1.8rem; color: #FFF; transition: all .2s; }
+.btn a:hover{ color: #dcdcdc; }
+/* マップボタン */
+.map_btn{ text-align: center; }
+.map_btn a{ display: block; margin: 0 auto; padding: 5px 0; width: 75%; background: linear-gradient(135deg, #4fc4ce, #4682b4); border-radius: 50px; font-weight: 700; font-size: 1.4rem; color: #FFF; transition: all .2s; }
+.map_btn a:hover{ color: #dcdcdc; }
+/* 見出し */
+.ttl{ font-weight: 700; font-size: 3rem; color: #FFF; }
+.en_ttl{ margin-bottom: 40px; font-weight: 700; color: #f8ca5e; }
+/* 見出し2 */
+.ttl2{ font-weight: 700; font-size: 3rem; }
+/* 太字 */
+.bold{ font-weight: 700; }
+/* 体験応募ボタン */
+.fix_btn{ position: fixed; z-index: 20; bottom: 50px; right: 30px; }
+.fix_unit{ display: flex; position: relative; width: 320px; height: 150px; background-image: url('img/fix.jpg'); background-position: center; background-size: cover;  border-radius: 5px; box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+.fa-times-circle{ position: absolute; z-index: 25; top: 10px; right: 10px; font-size: 3rem; }
+.fa-times-circle:hover{ cursor: pointer; }
+.fix_img{ width: 60%; height: 150px; border-radius: 0 5px 5px 0; background: linear-gradient(90deg, #FFF, transparent); }
+.fix_text{ width: 40%; height: 150px; padding-top: 20px; background: #FFF; border-radius: 5px 0 0 5px; }
+.fix_text h3{ margin-bottom: 15px; text-align: center; font-weight: 700; color: #f8ca5e; }
+.fix_text a .text{ color: #000; }
+.fix_text .text{ padding-left: 10px; text-align: center; font-size: 1.3rem; }
+/* ページトップ */
+.page_top a{ position: absolute; top: -20px; left: 50%; transform: translateX(-50%); display: block; padding: 5px 25px; background: linear-gradient(135deg, #4fc4ce, #4682b4); border-radius: 50px; font-weight: 700; color: #FFF; transition: all .2s; }
+.page_top a:hover{ color: #dcdcdc; }
+/* 注意書き */
+.note{ color: #dc143c; font-size: 1.4rem; }
+/* ページネーション */
+.wp-pagenavi { margin-top: 50px; text-align:center; }
+.pages{ display: none; }
+.wp-pagenavi a{ padding: 11px 14px!important; border-radius: 5px!important; border: none!important; background-color: #FFFFFF; color: #000; }
+.wp-pagenavi .current{ padding: 11px 14px; border-radius: 5px; background-color: #696969; border: none; color: #FFFFFF; }
+/* 個別+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* TOPページ--------------------------------------------------------------------
+-------------------------------------------------------------------------------- */
+/* ヘッダー ----------------------------------------------------------------------*/
+.header{ display: flex; justify-content: space-between; align-items: center; width: 97%; position: absolute; top: 20px; left: 50%; z-index: 10; height: 108px; padding-left: 50px; background-color: #3FB5CC; border-radius: 3px; transform: translateX(-50%); }
+.header_logo h1{ margin-top: 5px; }
+.header_logo h1 a img{ width: 300px; }
+.header_list li{ display: inline-block; }
+.header_list li a{ display: block; margin-left: 40px; font-weight: 700; color: #FFF; transition: .2s; }
+.header_list li a:hover{ color: #dcdcdc; }
+.header_list li:last-child a{ padding: 40px 20px; background-color: #f8ca5e; border-radius: 0 3px 3px 0; }
+#nav_open, #nav_close{ display: none; position: absolute; top: 50%; right: 15px; font-size: 3.0rem; transform: translateY(-50%); color: #FFF; }
+.sp_header{ display: none; position: fixed; top: 90px; left: 0; width: 100%; z-index: 10; padding: 15px 0 30px; text-align: center; background-color: #3FB5CC; overflow-y: scroll; }
+.sp_header_list li{ margin-bottom: 30px; }
+.sp_header_list li:last-child{ margin-bottom: 0; }
+.sp_header_list li a{ color: #FFF; font-weight: 700; transition: .2s; }
+.sp_header_list li a:hover{ color: #dcdcdc; }
+
+/* メイン ------------------------------------------------------------------------*/
+/* メインビジュアル */
+.first_view{ position: relative; width: 100%; height: 700px; background-image: url('img/kinka_team.jpg'); background-position: center; background-size: cover; }
+.white_cover{ position: absolute; right: 0; top: 0; width: 100%; height: 100%; background: linear-gradient( 135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); }
+.main_ttl{ position: absolute; top: 50%; left: 50%; transform: translateX(-50%) translateY(-50%); text-align: center; font-weight: 700; font-size: 5.5rem; color: #FFF; white-space: nowrap; }
+.main_ttl h1 span{ background: linear-gradient(transparent 85%, #f8ca5e 0%); }
+.nobr{ display: none; }
+/* 募集メッセージ */
+.recruit_message{ position: relative; z-index: 5; width: 70%; margin: -75px auto 150px; padding: 50px 30px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); text-align: center; border-radius: 5px; background-color: #FFF; }
+.recruit_ttl{ margin-bottom: 20px; font-size: 2.4rem; font-weight: 700; }
+.recruit_text{ margin-bottom: 30px; font-size: 1.8rem; }
+/* 金華支部とは */
+.about{ position: relative; background-color: #3FB5CC; padding: 80px 0 160px; }
+.about:before{ content: "KINKA KARATE"; position: absolute; top: -125px; font-size: 10.0rem; color: #3FB5CC; }
+.about_text{ margin-bottom: 50px; font-weight: 700; color: #FFF; }
+.about_img{ display: flex; justify-content: space-between; width: 100%; }
+.about_img_col{ position: relative; z-index: 1; width: 20%; box-shadow: 0 0 3px #3FB5CC; }
+.about_img_col:after{ content: ''; display: block; position: absolute; width: 98%; height: 98%; border-radius: 50%; bottom: 0px; right: -8px; }
+.about_img_col:nth-child(1):after,
+.about_img_col:nth-child(3):after{ background-color: #f8ca5e; }
+.about_img_col:nth-child(2):after,
+.about_img_col:nth-child(4):after{ background-color: #ff8c00; }
+.about_img_col img{ position: relative; z-index: 1; border-radius: 50%; }
+/* 支部長のあいさつ */
+.greet{ position: relative; padding: 80px 0 160px; }
+.greet:before{ content: "GREETING"; position: absolute; top: -125px; right: 0; font-size: 10.0rem; color: #FFF; }
+.greet_unit{ display: flex; justify-content: space-between; width: 100%; margin-bottom: 50px; }
+.greet_img{ width: 25%; }
+.greet_text{ position: relative; width: 70%; padding: 25px; background-color: #f5f5f5; border-radius: 5px; }
+.greet_text:before{ content: ""; position: absolute; top: 70px; left: -75px; border-style: solid; border-width: 40px; border-color: transparent #f5f5f5 transparent transparent; }
+.greet_message{ margin-bottom: 20px; text-align: justify; }
+.greet_name{ text-align: right; font-weight: 700; }
+/* よくある質問 */
+.question{ position: relative; background-color: #3FB5CC; padding: 80px 0 160px; }
+.question:before{ content: "QUESTION"; position: absolute; top: -125px; left: 0; font-size: 10.0rem; color: #3FB5CC; }
+.question_detail{ margin-bottom: 30px; }
+.question_detail dt{ position: relative; padding: 15px 35px 15px 55px; background-color: #dcdcdc; font-weight: 700; }
+.question_detail dt:hover{ cursor: pointer; }
+.question_detail dt:before{ content: "Q"; position: absolute; top: 50%; left: 15px; font-size: 3.2rem; color: #3FB5CC; transform: translateY(-50%); }
+.question_detail dt .plus{ content: ""; position: absolute; top: 50%; right: 15px; transform: translateY(-50%); }
+.question_detail dd{ display: none; position: relative; padding: 30px 30px 30px 55px; background-color: #FFF; }
+.question_detail dd:before{ content: "A"; position: absolute; top: 50%; left: 15px; font-size: 3.2rem; color: #f8ca5e; transform: translateY(-50%); }
+/* お知らせ */
+.news{ position: relative; padding: 80px 0 160px; }
+.news:before{ content: "NEWS"; position: absolute; top: -125px; right: 0; font-size: 10.0rem; color: #FFF; }
+.news_list{ margin-bottom: 50px; }
+.news_list li{ border-bottom: 2px solid #f5f5f5; }
+.news_list li:last-child{ border: none; }
+.news_list li a{ display: flex; padding: 20px 0; }
+.news_list time{ margin-right: 30px; color: #808080; }
+.news_list .text{ color: #000; }
+/* 活動日 */
+.active{ position: relative; background-color: #3FB5CC; padding: 80px 0 160px; }
+.active:before{ content: "ACTIVE DAY"; position: absolute; top: -125px; left: 0; font-size: 10.0rem; color: #3FB5CC; }
+.active_unit{ display: flex; justify-content: space-between; width: 100%; }
+.active_col{ width: 31.5%; }
+.map{ height: 240px; }
+.active_detail{ position: relative; padding: 40px 20px 20px; background-color: #FFF; border-top: 5px solid #f8ca5e; }
+.active_col:nth-child(1) .active_detail:before{ content: ""; position: absolute; top: -40px; left: 50%; width: 80px; height: 80px; background: url('img/a.png'); transform: translateX(-50%);}
+.active_col:nth-child(2) .active_detail:before{ content: ""; position: absolute; top: -40px; left: 50%; width: 80px; height: 80px; background: url('img/b.png'); transform: translateX(-50%);}
+.active_col:nth-child(3) .active_detail:before{ content: ""; position: absolute; top: -40px; left: 50%; width: 80px; height: 80px; background: url('img/c.png'); transform: translateX(-50%);}
+.active_box{ display: flex; justify-content: space-between; width: 100%; margin-bottom: 10px; }
+.active_box:nth-child(4){ margin-bottom: 20px; }
+.active_box:last-child{ margin-bottom: 0; }
+.active_box dt{ width: 50px; font-weight: 700; font-size: 1.4rem; }
+.active_box dd{ width: calc(100% - 60px); font-size: 1.4rem; }
+/* フッター ------------------------------------------------------------------------*/
+footer{ position: relative; border-top: 0.5px solid #f5f5f5; }
+.footer_logo{ margin-bottom: 10px; }
+.footer_logo h2 a img{ width: 300px; }
+.footer_unit{ display: flex; justify-content: space-between; width: 100%; padding: 80px 0 300px; }
+.footer_list li{ display: inline-block; }
+.footer_list li a{ margin-left: 30px; color: #000; transition: .2s; }
+.footer_list li a:hover{ color: #dcdcdc; }
+.copyright{ padding: 10px 5px; background-color: #f5f5f5; text-align: center; font-size: 1.4rem; }
+.description a{ color:#000; transition: .2s; }
+.description a:hover{ color: #dcdcdc; }
+
+/* 指導員紹介ページ--------------------------------------------------------------
+-------------------------------------------------------------------------------- */
+/* サブビジュアル */
+.sub_visial{ position: relative; width: 100%; height: 600px; background-color: #f5f5f5; }
+.background { position: absolute; display: block; top: 0; left: 0; z-index: 0; }
+.sub_ttl{ position: absolute; top: 300px; left: 50%; font-weight: 700; font-size: 5.0rem; transform: translateX(-50%); white-space: nowrap; }
+/* 指導員紹介 */
+.teacher{ padding: 80px 0; }
+.teacher_unit{ display: flex; justify-content: space-between; width: 100%; }
+.teacher_col{ width: 31.5%; }
+.teacher_col dt{ position: relative; margin-bottom: 30px; text-align: center; }
+.teacher_col dt:after{ position: absolute; bottom: 0; left: 0; padding: 3px 30px; background-color: #f5f5f5; font-size: 1.8rem; font-weight: 700; }
+.teacher_col:nth-child(1) dt:after{ content: "深田 喜美"; }
+.teacher_col:nth-child(2) dt:after{ content: "深田 航平"; }
+.teacher_col:nth-child(3) dt:after{ content: "深田 修平"; }
+.teacher_col dt img{ width: 70%; border-radius: 50%; }
+.license{ margin-bottom: 20px; text-align: center; font-weight: 700; }
+.license_list li{ position: relative; padding-left: 20px; font-size: 1.4rem; }
+.license_list li:before{ content: ""; position: absolute; top: 6px; left: 0; width: 12px; height: 12px; background-color: #3FB5CC; border-radius: 50%; }
+.aid{ padding: 80px 0 160px; }
+.aid_unit{ display: flex; justify-content: flex-start; width: 100%; }
+.aid_col{ position: relative; width: 31.5%; margin-right: 2.75%; text-align: center; }
+.aid_col:after{ position: absolute; bottom: 0; left: 0; padding: 3px 30px; background-color: #f5f5f5; font-size: 1.8rem; font-weight: 700; }
+.aid_col:nth-child(3n){ margin-right: 0; }
+.aid_col:nth-child(1):after{ content: "平工 由紀"; }
+.aid_col:nth-child(2):after{ content: "藤岡 容子"; }
+.aid_col img{ width: 70%; border-radius: 50%; }
+
+/* 生徒紹介ページ ---------------------------------------------------------------
+-------------------------------------------------------------------------------- */
+/* 生徒 */
+.child{ padding: 80px 0; }
+.child_unit{ display: flex; justify-content: flex-start; flex-wrap: wrap; width: 100%; }
+.child_col{ width: 31.5%; margin-right: 2.75%; margin-bottom: 30px; text-align: center; }
+.child_col:nth-last-of-type(1),.child_col:nth-last-of-type(2),.child_col:nth-last-of-type(3){ margin-bottom: 0; }
+.child_col:nth-child(3n){ margin-right: 0; }
+.child_col dt{ position: relative; margin-bottom: 20px; }
+.child_col dt:after{ position: absolute; bottom: 0; left: 0; padding: 3px 30px; background-color: #f5f5f5; font-size: 1.8rem; font-weight: 700; }
+.child_col dd{ font-weight: 700; }
+.child_col img{ width: 70%; border-radius: 50%; }
+.child_col:nth-child(1) dt:after{ content: "HOMARE"; }
+.child_col:nth-child(2) dt:after{ content: "MIKIKO"; }
+.child_col:nth-child(3) dt:after{ content: "YUKI"; }
+.child_col:nth-child(4) dt:after{ content: "WANAKA"; }
+.child_col:nth-child(5) dt:after{ content: "RYO"; }
+.child_col:nth-child(6) dt:after{ content: "KOHARU"; }
+.child_col:nth-child(7) dt:after{ content: "HIROTO"; }
+.child_col:nth-child(8) dt:after{ content: "AOI"; }
+.child_col:nth-child(9) dt:after{ content: "SAKIKO"; }
+.child_col:nth-child(10) dt:after{ content: "RITSUKO"; }
+.child_col:nth-child(11) dt:after{ content: "YOTA"; }
+/* 一般 */
+.general{ padding: 80px 0 160px; }
+.general_unit{ display: flex; justify-content: flex-start; flex-wrap: wrap; width: 100%; }
+.general_col{ width: 31.5%; margin-right: 2.75%; margin-bottom: 30px; text-align: center; }
+.general_col:nth-last-of-type(1),.child_col:nth-last-of-type(2),.child_col:nth-last-of-type(3){ margin-bottom: 0; }
+.general_col:nth-child(3n){ margin-right: 0; }
+.general_col dt{ position: relative; margin-bottom: 20px; }
+.general_col dt:after{ position: absolute; bottom: 0; left: 0; padding: 3px 30px; background-color: #f5f5f5; font-size: 1.8rem; font-weight: 700; }
+.general_col dd{ font-weight: 700; }
+.general_col img{ width: 70%; border-radius: 50%; }
+.general_col:nth-child(1) dt:after{ content: "ERIKO"; }
+.general_col:nth-child(2) dt:after{ content: "YASUHISA"; }
+.general_col:nth-child(3) dt:after{ content: "TAKAHIRO"; }
+
+/* お知らせページ ---------------------------------------------------------------
+-------------------------------------------------------------------------------- */
+.news_detail{ padding: 80px 0 160px; }
+.news_detail_unit{ display: flex; justify-content: flex-start; flex-wrap: wrap; width: 100%; }
+.news_detail_col{ width: 30%; margin-right: 5%; margin-bottom: 30px; }
+.news_detail_col:nth-last-of-type(1),.news_detail_col:nth-last-of-type(2),.news_detail_col:nth-last-of-type(3){ margin-bottom: 0; }
+.news_detail_col:nth-child(3n){ margin-right: 0; }
+.news_detail_img img{ margin-bottom: 10px; height: auto; box-shadow: 4px 4px #3FB5CC; transition: .2s; }
+.news_detail_img img:hover{ opacity: .5; }
+.news_detail_text dt a{ font-weight: 700; color: #000; transition: .2s; }
+.news_detail_text dt a:hover,.news_detail_text dd a:hover{ color: #dcdcdc; }
+.news_detail_text dd a{ font-size: 1.4rem; color: #000; transition: .2s; }
+.news_detail_text dd time{ font-size: 1.4rem; color: #808080; }
+
+/* 投稿詳細ページ ---------------------------------------------------------------
+-------------------------------------------------------------------------------- */
+.post_detail{ padding: 200px 0 160px; }
+.post_detail h1{ position: relative; padding-left: 25px; font-weight: 700; font-size: 2.5rem; }
+.post_detail h1:before{ content: ""; position: absolute; top: 50%; left: 0; width: 10px; height: 85%; background-color: #3FB5CC; transform: translateY(-50%); }
+.post_detail time{ display: block; margin-bottom: 30px; color: #808080; font-size: 1.4rem; }
+.post_detail img{ margin-bottom: 20px; height: auto; }
+.post_detail p{ margin-bottom: 20px; }
+.post_detail a{ margin-bottom: 20px; color: #808080; font-weight: 700; border-bottom: 1px solid #808080; }
+
+/* お問い合わせ ---------------------------------------------------------------
+-------------------------------------------------------------------------------- */
+.contact{ padding: 80px 0 160px; }
+.contact dt{ font-weight: 700; }
+.contact_name dd input,
+.contact_email dd input,
+.contact_detail dd select{ margin-bottom: 20px; padding: 10px; height: 60px; background-color: #dcdcdc; border-radius: 5px; }
+.contact_message dd textarea{  margin-bottom: 30px; padding: 10px; background-color: #dcdcdc; border-radius: 5px; }
+.btn input{ display: block; margin: 0 auto; padding: 10px 5px; width: 400px; background: linear-gradient(135deg, #4fc4ce, #4682b4); border-radius: 50px; font-weight: 700; font-size: 1.8rem; color: #FFF; transition: all .2s;  }
+
+/* 404ページ ---------------------------------------------------------------
+-------------------------------------------------------------------------------- */
+.error{ padding: 100px 0; }
+.error_message{ margin-bottom: 50px; text-align: center; }
+
+@media(max-width: 960px){
+    /* 共通+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    /* ボタン */
+    .btn a{ font-size: 1.6rem; }
+    /* 見出し */
+    .ttl{ font-size: 2.5rem; }
+    .en_ttl{ margin-bottom: 15px; }
+    /* 見出し2 */
+    .ttl2{ font-size: 2.5rem; }
+    /* 体験応募ボタン */
+    .fix_btn{ bottom: 20px; right: 20px; }
+    /* 個別+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+    /* TOPページ--------------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    /* ヘッダー ----------------------------------------------------------------------*/
+    .header{ width: 100%; height: 90px; padding-left: 0; position: fixed; top: 0; left: 0; border-radius: unset; transform: translateX(0%); }
+    .header_logo{ margin: 0 auto; }
+    .header_list li{ display: none; }
+    #nav_open{ display: block; }
+    /* メイン ------------------------------------------------------------------------*/
+    /* メインビジュアル */
+    .main_ttl{ font-size: 4rem; }
+    .main_ttl h1 span{ background: linear-gradient(transparent 85%, #f8ca5e 0%); }
+    /* 募集メッセージ */
+    .recruit_message{ width: 96%; margin: -100px auto 150px; padding: 30px 20px; }
+    .recruit_ttl{ font-size: 2.0rem; font-weight: 700; }
+    .recruit_text{ font-size: 1.6rem; }
+    /* 金華支部とは */
+    .about:before{ top: -100px; font-size: 8.0rem; }
+    .about_img_col{ width: 23%; }
+    .about_img_col:after{ bottom: 3px; right: -3px; }
+    /* 支部長のあいさつ */
+    .greet:before{ top: -100px; font-size: 8.0rem; }
+    .greet_unit{ display: flex; justify-content: space-between; width: 100%; margin-bottom: 50px; }
+    .greet_img{ display: none; width: 0; }
+    .greet_text{ width: 100%; padding: 20px;}
+    .greet_text:before{ display: none; }
+    .greet_message{ margin-bottom: 10px; }
+    /* よくある質問 */
+    .question:before{ top: -100px; font-size: 8.0rem; }
+    .question_detail dd{ padding: 20px 20px 20px 55px; }
+    /* お知らせ */
+    .news:before{ top: -100px; font-size: 8.0rem; }
+    /* 活動日 */
+    .active:before{ top: -100px; font-size: 8.0rem; }
+    .active_unit{ flex-wrap: wrap; justify-content: space-around; }
+    .active_col{ width: 48.5%; margin-bottom: 10px; }
+    /* フッター ------------------------------------------------------------------------*/
+    footer{ text-align: center; }
+    .footer_unit{ flex-direction: column; padding: 80px 0; }
+    .footer_list li{ display: block; margin-bottom: 30px; }
+    .footer_list li:last-child{ margin-bottom: 0; }
+    .footer_list li a{ margin-left: 0; }
+    .description{ margin-bottom: 30px; }
+
+    /* 指導員紹介ページ--------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    /* サブビジュアル */
+    .sub_visial{ height: 500px; }
+    .sub_ttl{ top: 250px; font-size: 4.0rem; }
+    /* 指導員紹介 */
+    .teacher{ padding: 80px 0 40px; }
+    .teacher_unit{ flex-direction: column; }
+    .teacher_col{ display: flex; justify-content: space-between; width: 100%; margin-bottom: 50px; }
+    .teacher_col dt{ width: 220px; margin-right: 30px; margin-bottom: 0; }
+    .teacher_col dd{ width: calc(100% - 250px); }
+    .teacher_col dt img{ width: 100%; }
+    .license{ margin-bottom: 5px; text-align: left; }
+    .aid{ padding: 40px 0 160px; }
+    .aid_col:after{ padding: 3px 20px; font-size: 1.6rem; }
+    .aid_col img{ width: 90%; border-radius: 50%; }
+
+    /* 生徒紹介ページ ---------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    /* 生徒 */
+    .child_col img{ width: 90%; border-radius: 50%; }
+    .child_col dt:after{ padding: 3px 20px; font-size: 1.6rem; }
+    /* 一般 */
+    .general_col img{ width: 90%; border-radius: 50%; }
+    .general_col dt:after{ padding: 3px 20px; font-size: 1.6rem; }
+
+    /* お知らせページ ---------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    .news_detail_col{ width: 48%; margin-right: 4%; margin-bottom: 30px; }
+    .news_detail_col:nth-child(2n){ margin-right: 0; }
+    .news_detail_col:nth-child(3n){ margin-right: 4%; }
+    .news_detail_col:nth-last-of-type(2),.news_detail_col:nth-last-of-type(3){ margin-bottom: 30px; }
+
+    /* お問い合わせ ---------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    .btn input{ font-size: 1.6rem; }
+}
+
+@media(max-width: 640px){
+    /* 共通+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    /* ボタン */
+    .btn a{ width: 98%; }
+    /* 個別+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+    /* TOPページ--------------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    /* メイン ------------------------------------------------------------------------*/
+    /* メインビジュアル */
+    .main_ttl{ font-size: 3rem; }
+    /* 募集メッセージ */
+    .recruit_message{ margin: -130px auto 100px; }
+    .recruit_text{ font-size: 1.4rem; }
+    /* 金華支部とは */
+    .about{ padding: 50px 0 100px; }
+    .about:before{ content: "ABOUT"; top: -88px; font-size: 7.0rem; }
+    .about_text{ margin-bottom: 30px; }
+    /* 支部長のあいさつ */
+    .greet{ padding: 50px 0 100px; }
+    .greet:before{ top: -88px; font-size: 7.0rem; }
+    .greet_unit{ margin-bottom: 30px; }
+    /* よくある質問 */
+    .question{ padding: 50px 0 100px; }
+    .question:before{ top: -88px; font-size: 7.0rem; }
+    .question_detail dt{ padding: 15px 35px 15px 15px; }
+    .question_detail dt:before{ display: none; }
+    .question_detail dd{ padding: 20px; }
+    .question_detail dd:before{ display: none; }
+    /* お知らせ */
+    .news{ padding: 50px 0 100px; }
+    .news:before{ top: -88px; font-size: 7.0rem; }
+    .news_list { margin-bottom: 30px; }
+    .news_list li a{ display: flex; flex-direction: column; }
+    .news_list time{ margin-right: 0; }
+    /* 活動日 */
+    .active{ padding: 50px 0 100px; }
+    .active:before{ top: -88px; font-size: 7.0rem; }
+    .active_col{ width: 100%; }
+
+    /* 指導員紹介ページ--------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    /* 指導員紹介 */
+    .teacher{ padding: 50px 0 25px; }
+    .teacher_col{ flex-direction: column; margin-bottom: 40px; }
+    .teacher_col dt{ width: 300px; margin: 0 auto 30px; }
+    .teacher_col dd{ width: 100%; }
+    .teacher_col dt:after{ font-size: 1.6rem; }
+    .license{ margin-bottom: 10px; text-align: center; }
+    .aid{ padding: 25px 0 100px; }
+    .aid_unit{ flex-direction: column; }
+    .aid_col{ width: 300px; margin: 0 auto 40px; }
+    .aid_col img{ width: 100%; border-radius: 50%; }
+
+    /* 生徒紹介ページ ---------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    /* 生徒 */
+    .child_unit{ flex-direction: column; }
+    .child_col{ width: 300px; margin: 0 auto 40px; }
+    .child_col img{ width: 100%; }
+    .child_col:nth-last-of-type(1),.child_col:nth-last-of-type(2),.child_col:nth-last-of-type(3){ margin-bottom: 40px; }
+    .child_col:nth-child(3n){ margin-right: auto; }
+    /* 一般 */
+    .general_unit{ flex-direction: column; }
+    .general_col{ width: 300px; margin: 0 auto 40px; }
+    .general_col:nth-last-of-type(1),.child_col:nth-last-of-type(2),.child_col:nth-last-of-type(3){ margin-bottom: 40px; }
+    .general_col:nth-child(3n){ margin-right: auto; }
+    .general_col img{ width: 100%; }
+
+    /* お知らせページ ---------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    .news_detail{ padding: 50px 0 100px; }
+    .news_detail_col{ width: 100%; margin-right: 0; }
+    .news_detail_col:nth-child(2n){ margin-right: 0; }
+    .news_detail_col:nth-child(3n){ margin-right: 0; }
+
+    /* 投稿詳細ページ ---------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    .post_detail{ padding: 160px 0 100px; }
+    .post_detail h1{ font-size: 2.0rem; }
+    .post_detail p{ font-size: 1.4rem; }
+    .post_detail a{ font-size: 1.4rem; }
+
+    /* お問い合わせ ---------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    .contact{ padding: 50px 0 100px; }
+    .btn input{ width: 98%; }
+
+}
+
+@media(max-width: 470px){
+    /* 共通+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+    /* 体験応募ボタン */
+    .fix_unit{ width: 265px; height: 130px; }
+    .fix_img{ width: 50%; height: 130px; }
+    .fix_text{ width: 50%; height: 130px; padding-top: 16px; }
+    /* 個別+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+    /* TOPページ--------------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    /* ヘッダー ----------------------------------------------------------------------*/
+    .header_logo h1 a img{ width: 215px; }
+    /* メイン ------------------------------------------------------------------------*/
+    /* メインビジュアル */
+    .nobr{ display: block; }
+    /* 募集メッセージ */
+    .recruit_message{ padding: 20px 15px; text-align: unset; }
+    .recruit_ttl{ text-align: center; font-size: 1.6rem; }
+    .recruit_text{ text-align: justify; }
+    /* 金華支部とは */
+    .about:before{ top: -62px; font-size: 5.0rem; }
+    .about_img{ flex-wrap: wrap; }
+    .about_img_col{ width: 46%; margin: 0 auto 10px; }
+    .about_img_col:nth-child(3),.about_img_col:nth-child(4){ margin-bottom: 0; }
+    /* 支部長のあいさつ */
+    .greet:before{ top: -62px; font-size: 5.0rem; }
+    .greet_text{ padding: 15px; }
+    /* よくある質問 */
+    .question:before{ top: -62px; font-size: 5.0rem; }
+    .question_detail{ margin-bottom: 15px; }
+    .question_detail dd{ padding: 15px; font-size: 1.4rem; }
+    /* お知らせ */
+    .news:before{ top: -62px; font-size: 5.0rem; }
+    /* 活動日 */
+    .active:before{ top: -62px; font-size: 5.0rem; }
+
+    /* 指導員紹介ページ--------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    /* サブビジュアル */
+    .sub_visial{ height: 500px; }
+    .sub_ttl{ top: 270px; font-size: 3.0rem; }
+
+    /* 404ページ ---------------------------------------------------------------
+    -------------------------------------------------------------------------------- */
+    .error_message{ font-size: 1.4rem; }
+
+}
